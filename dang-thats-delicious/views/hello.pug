@@ -1,0 +1,16 @@
+//- If you leave the element type out, (e.g. .wrapper.ohnooo) it will assume it is a div
+//- pipe + space (e.g. | ) to just have normal text content
+//- #{variableName} to interpolate a variable into text
+//- `${dog}` to interpolate a variable into attributes (e.g. normal ES6 interpolation)
+//- You can run javascript in pug. To run a standalone statement, prefix with a hyphen
+//- layouts have blocks. When we extend a layout, we just tell it what we want to put in the designated blocks
+//- default content will be shown in the block if nothing is passed to it
+
+
+extends layout
+
+block content
+    p Sale ends in #{h.moment().endOf('day').fromNow()}
+
+block footer
+    p (T) its
